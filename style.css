@@ -22,18 +22,42 @@ header {
     padding: 8px;
     background: #d47c00;
     color: #fff;
-    font-size: 24px; /* Reduced font size for smaller screens */
+    font-size: 24px; /* Reduced font size */
     font-weight: bold;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: slideDown 1s ease-in-out;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide text overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text exceeds width */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Ensure overflow doesn't break layout */
+    text-overflow: ellipsis; /* Handle text overflow gracefully */
 }
+
+/* Mobile-specific Header Adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px; /* Further reduce font size for smaller screens */
+        padding: 6px;
+    }
+}
+
+/* Mobile-specific Header Adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px; /* Further reduce font size for smaller screens */
+        padding: 6px;
+    }
+}
+
+/* Mobile-specific Header Adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px; /* Further reduce font size for smaller screens */
+        padding: 6px;
+    }
+}
+
 
 /* Adjust Header Font Size for Mobile */
 @media (max-width: 768px) {
