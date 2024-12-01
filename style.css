@@ -31,6 +31,23 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     animation: slideDown 1s ease-in-out;
 }
+/* Style for the header title */
+header h1 {
+    font-size: 20px; /* Adjust the font size to make it smaller */
+    text-align: center; /* Ensure the text is centered */
+    margin: 0; /* Remove extra margins */
+    padding: 10px; /* Add some padding for spacing */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+/* Adjust the header container */
+header {
+    background-color: #ff9800; /* Same orange color */
+    color: #fff; /* White text */
+    padding: 10px; /* Padding for spacing */
+}
 
 /* Slide Down Animation for Header */
 @keyframes slideDown {
