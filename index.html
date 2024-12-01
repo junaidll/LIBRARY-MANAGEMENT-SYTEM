@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple Library Management System to manage books, issues, and returns.">
+    <meta name="keywords" content="Library, Management, Books, System, Issue, Return, HTML, CSS, JS">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- Notification div -->
+<div id="notification"></div>
+
+<section id="welcomePage">
+    <h1>Welcome to the Library Management System</h1>
+    <button onclick="showSection('mainMenu')">Get Started</button>
+    <!-- Floating Book -->
+    <div id="floatingBook">
+        <img src="book-icon.png" alt="Floating Book">
+    </div>
+</section>
+
+<!-- Header -->
+<header>
+    Library Management System
+</header>
+
+<!-- Menu -->
+<section id="mainMenu" class="hidden">
+    <div id="menu">
+        <button onclick="showSection('addBook')">Add Book</button>
+        <button onclick="displayBooks()">Display Books</button>
+        <button onclick="showSection('issueBook')">Issue Book</button>
+        <button onclick="showSection('returnBook')">Return Book</button>
+        <button onclick="showIssuedBooks()">View Issued Books</button>
+        <button onclick="showSection('deleteBook')">Delete Book</button>
+        <button onclick="exitSystem()">Exit</button>
+    </div>
+</section>
+
+<!-- Add Book Section -->
+<section id="addBook" class="hidden">
+    <h2>Add a Book</h2>
+    <input type="text" id="bookID" placeholder="Book ID">
+    <input type="text" id="bookTitle" placeholder="Book Title">
+    <input type="text" id="bookAuthor" placeholder="Book Author">
+    <button onclick="addBook()">Add Book</button>
+    <button onclick="goBack()">Back</button>
+</section>
+
+<!-- Display Books Section -->
+<section id="displayBooks" class="hidden">
+    <h2>Books Available</h2>
+    <table id="booksTable">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody id="booksTableBody">
+            <!-- Books will be displayed here -->
+        </tbody>
+    </table>
+    <button onclick="goBack()">Back</button>
+</section>
+
+<!-- Issue Book Section -->
+<section id="issueBook" class="hidden">
+    <h2>Issue a Book</h2>
+    <input type="text" id="issueBookID" placeholder="Book ID">
+    <input type="text" id="studentName" placeholder="Student Name">
+    <button onclick="issueBook()">Issue Book</button>
+    <button onclick="goBack()">Back</button>
+</section>
+
+<!-- View Issued Books Section -->
+<section id="viewIssuedBooks" class="hidden">
+    <h2>Issued Books</h2>
+    <table id="issuedBooksTable">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Issued To</th>
+            </tr>
+        </thead>
+        <tbody id="issuedBooksTableBody">
+            <!-- Issued Books will be displayed here -->
+        </tbody>
+    </table>
+    <button onclick="goBack()">Back</button>
+</section>
+
+
+<!-- Return Book Section -->
+<section id="returnBook" class="hidden">
+    <h2>Return a Book</h2>
+    <input type="text" id="returnBookID" placeholder="Book ID">
+    <button onclick="returnBook()">Return Book</button>
+    <button onclick="goBack()">Back</button>
+</section>
+
+<!-- Delete Book Section -->
+<section id="deleteBook" class="hidden">
+    <h2>Delete a Book</h2>
+    <input type="text" id="deleteBookID" placeholder="Book ID">
+    <button onclick="deleteBook()">Delete Book</button>
+    <button onclick="goBack()">Back</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    Developed by - ( Mohd Junaid Khan )
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

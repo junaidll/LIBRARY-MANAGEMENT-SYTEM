@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Lora', serif;  /* Elegant, serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    background-image: radial-gradient(#000 1px, transparent 1px); /* Black spots */
+    background-size: 20px 20px; /* Adjust size for spacing of spots */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Header */
+header {
+    font-family: 'Lora', serif;  /* Elegant, serif font */
+    text-align: center;
+    padding: 10px;
+    background: #d47c00;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Slide Down Animation for Header */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/* Floating Book Effect */
+#floatingBook {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: float 6s ease-in-out infinite;
+}
+
+#floatingBook img {
+    width: 100px; /* Adjust the size of the book */
+    
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(-50%);
+    }
+    25% {
+        transform: translateY(-30px) translateX(-50%);
+    }
+    50% {
+        transform: translateY(0) translateX(-50%);
+    }
+    75% {
+        transform: translateY(30px) translateX(-50%);
+    }
+    100% {
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+/* Slightly Rotate Floating Book */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Menu */
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade In Animation for Menu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button Styles */
+button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: translateY(-5px);
+}
+
+/* Hidden Sections */
+.hidden {
+    display: none;
+}
+
+/* Section Styles */
+section {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Zoom In Animation for Sections */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #00796b;
+    color: white;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#notification {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.success {
+    background-color: #4caf50;
+}
+
+.error {
+    background-color: #f44336;
+}
